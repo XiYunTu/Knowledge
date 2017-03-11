@@ -1,0 +1,38 @@
+menu:
+  Docs: /docs/
+  API: /api/classes/Hexo.html
+  Plugins: https://github.com/tommy351/hexo/wiki/Plugins
+  Themes: https://github.com/tommy351/hexo/wiki/Themes
+  Source: https://github.com/tommy351/hexo
+
+doc_sidebar:
+  Getting Started:
+    Overview: index.html
+    Setup: setup.html
+    Configuration: configuration.html
+    Commands: commands.html
+    Migration: migration.html
+  Basic Usage:
+    Writing: writing.html
+    Generating: generating.html
+    Tag Plugins: tag-plugins.html
+    Server: server.html
+    Deployment: deployment.html
+  Customization:
+    Permalinks: permalinks.html
+    Themes: themes.html
+    Variables: variables.html
+    Pagination: pagination.html
+    Helpers: helpers.html
+    Plugins: plugins.html
+  Advanced:
+    Models: models.html
+    Events: events.html
+  Miscellaneous:
+    Troubleshooting: troubleshooting.html
+    Contributing: contributing.html
+
+google_analytics: UA-4910098-10
+fb_admins: 100000247608790
+swiftype_key: DDvzs7LQ9kdKssQNQLcv
+twitter: hexojs
