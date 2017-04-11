@@ -5,7 +5,14 @@ menu:
   plugins: Plugins
   themes: Themes
   search: Search
-  ead: EAD
+  web: Web
+  node: Node
+  j2ee: J2EE
+  xytio: XYT.IO
+  ux: UX
+  mobile: Mobile
+  webapp: Web App
+  database: Database
 
 index:
   get_started: Get started
@@ -68,8 +75,8 @@ sidebar:
     processor: Processor
     renderer: Renderer
     tag: Tag
-  ead:
-    architecture: 技术架构
+  xytio:
+    ead: EAD
     overview: 概述
     platform: 平台介绍
     protocol: 协议架构
@@ -82,3 +89,35 @@ sidebar:
     developer: 开发者中心
     scenario: 典型应用场景
     deployment: 部署架构
+  ux:
+    overview: 概述
+  web:
+    html5: HTML 5
+    base: 基础知识
+    css3: CSS 3
+    overview: 概述
+    javascript: Javascript
+    browers: 浏览器
+    getting_started: 入门
+    ide: 开发工具
+    catalog: 目录结构
+    basic_template: 基本模板
+    resources: 资源素材
+    bootstrap: Bootstrap
+    weui: WeUI
+    ant: Ant.Design
+    semantic_ui: Semantic UI
+  webapp:
+    base: 基础知识
+    spa: 单页应用框架
+    modules: 模块管理
+    angular: Angular
+    overview: 概览
+    vue: Vue
+    react: React
+    ionic: Ionic
+    introduction: 介绍
+    installation: 开发环境安装
+    getting_started: 入门
+    advanced: 高级进阶
+

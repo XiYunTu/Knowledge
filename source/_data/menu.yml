@@ -1,6 +1,8 @@
-docs: /docs/
-api: /api/
-news: /news/
-plugins: /plugins/
-themes: /themes/
-ead: /ead/
+web: /web/
+node: /node/
+j2ee: /j2ee/
+xytio: /xytio/
+ux: /ux/
+mobile: /mobile/
+webapp: /webapp/
+database: /database/
