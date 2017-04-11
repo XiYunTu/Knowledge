@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>服务组件 | 西云图</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://hexo.io/ead/components.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://hexo.io/ead/components.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://hexo.io/zh-cn/ead/components.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="西云图">
+  <!-- Open Graph -->
+  <meta name="description" content="EAD 引擎采用微服务和 AOP 的架构进行设计开发，将引擎通用模块抽象为服务能力组件。 各服务组件各司其职，减少代码的冗余重复，各组件以服务的方式提供对外调用的方法和接口。
+1. 基础组件基础类组件为 EAD 引擎的核心组件，所有业务必须依赖于基础组件进行管理和调度或服务提供才可以实现 EAD 平台的正常运行。
+模型（Model）数据管理组件，通过对模型属性、方法等的定义实现业务数据的定义描述">
+<meta property="og:type" content="website">
+<meta property="og:title" content="服务组件">
+<meta property="og:url" content="https://hexo.io/ead/components.html">
+<meta property="og:site_name" content="西云图">
+<meta property="og:description" content="EAD 引擎采用微服务和 AOP 的架构进行设计开发，将引擎通用模块抽象为服务能力组件。 各服务组件各司其职，减少代码的冗余重复，各组件以服务的方式提供对外调用的方法和接口。
+1. 基础组件基础类组件为 EAD 引擎的核心组件，所有业务必须依赖于基础组件进行管理和调度或服务提供才可以实现 EAD 平台的正常运行。
+模型（Model）数据管理组件，通过对模型属性、方法等的定义实现业务数据的定义描述">
+<meta property="og:image" content="https://hexo.io/.\images\services-components.png">
+<meta property="og:updated_time" content="2017-03-11T06:01:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="服务组件">
+<meta name="twitter:description" content="EAD 引擎采用微服务和 AOP 的架构进行设计开发，将引擎通用模块抽象为服务能力组件。 各服务组件各司其职，减少代码的冗余重复，各组件以服务的方式提供对外调用的方法和接口。
+1. 基础组件基础类组件为 EAD 引擎的核心组件，所有业务必须依赖于基础组件进行管理和调度或服务提供才可以实现 EAD 平台的正常运行。
+模型（Model）数据管理组件，通过对模型属性、方法等的定义实现业务数据的定义描述">
+<meta name="twitter:image" content="https://hexo.io/.\images\services-components.png">
+<meta name="twitter:site" content="hexojs">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/zh-cn/api/" class="main-nav-link">API</a><a href="/news/" class="main-nav-link">新闻</a><a href="/plugins/" class="main-nav-link">插件</a><a href="/themes/" class="main-nav-link">主题</a><a href="/ead/" class="main-nav-link">EAD</a>
+      <a href="https://github.com/hexojs/hexo" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">服务组件</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/ead/components.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p><img src=".\images\services-components.png" alt="服务组件"></p>
+<p>EAD 引擎采用微服务和 AOP 的架构进行设计开发，将引擎通用模块抽象为服务能力组件。 各服务组件各司其职，减少代码的冗余重复，各组件以服务的方式提供对外调用的方法和接口。</p>
+<h3 id="1-基础组件" class="article-heading"><a href="#1-基础组件" class="headerlink" title="1. 基础组件"></a>1. 基础组件<a class="article-anchor" href="#1-基础组件" aria-hidden="true"></a></h3><p>基础类组件为 EAD 引擎的核心组件，所有业务必须依赖于基础组件进行管理和调度或服务提供才可以实现 EAD 平台的正常运行。</p>
+<h4 id="模型（Model）" class="article-heading"><a href="#模型（Model）" class="headerlink" title="模型（Model）"></a>模型（Model）<a class="article-anchor" href="#模型（Model）" aria-hidden="true"></a></h4><p>数据管理组件，通过对模型属性、方法等的定义实现业务数据的定义描述，并根据规则实现数据的查询和操作管理。</p>
+<h4 id="存储（Storage）" class="article-heading"><a href="#存储（Storage）" class="headerlink" title="存储（Storage）"></a>存储（Storage）<a class="article-anchor" href="#存储（Storage）" aria-hidden="true"></a></h4><p>文件存储组件，利用 GridFS 可以实现 EAD 静态文件的分片、分布式架构存储。利用 MD5 Hash 统一实现重复文件校验，减少碎片化文件存储，节省存储资源。组件提供统一的文件写入和读取接口，降低文件存储的实现难度。通过适配器方式对接存储引擎，允许以插件的形式接入不同类型的存储引擎。</p>
+<h4 id="参数（Param）" class="article-heading"><a href="#参数（Param）" class="headerlink" title="参数（Param）"></a>参数（Param）<a class="article-anchor" href="#参数（Param）" aria-hidden="true"></a></h4><p>参数管理组件，支持直接量、会话、驱动等形式的系统参数定义。提供参数访问的接口，可以在平台引擎各个配置参数节点访问系统参数，最大限度提升系统的动态可配置性。</p>
+<h4 id="驱动（Driver）" class="article-heading"><a href="#驱动（Driver）" class="headerlink" title="驱动（Driver）"></a>驱动（Driver）<a class="article-anchor" href="#驱动（Driver）" aria-hidden="true"></a></h4><p>驱动管理组件，对开发者自定义扩展的驱动程序进行注册管理和访问接口提供。通过依赖注入的方式动态进行驱动程序的调度和生命周期管理。</p>
+<h3 id="2-系统组件" class="article-heading"><a href="#2-系统组件" class="headerlink" title="2. 系统组件"></a>2. 系统组件<a class="article-anchor" href="#2-系统组件" aria-hidden="true"></a></h3><p>系统类组件为 EAD 平台通用业务模块，系统组件负责用户、应用、角色、资源等通用业务的提供，也可以根据业务需要对通用业务进行扩展开发。</p>
+<h4 id="用户（User）" class="article-heading"><a href="#用户（User）" class="headerlink" title="用户（User）"></a>用户（User）<a class="article-anchor" href="#用户（User）" aria-hidden="true"></a></h4><p>用户组件，对系统账户、组织机构、权限、登录认证进行管理，提供用户字典和认证服务接口。</p>
+<h4 id="应用（App）" class="article-heading"><a href="#应用（App）" class="headerlink" title="应用（App）"></a>应用（App）<a class="article-anchor" href="#应用（App）" aria-hidden="true"></a></h4><p>应用组件，对视图进行资源化管理，支持多实例应用创建，对应用资源、角色和资源授权进行管理，提供用户应用资源 API。</p>
+<h4 id="资源（Resource）" class="article-heading"><a href="#资源（Resource）" class="headerlink" title="资源（Resource）"></a>资源（Resource）<a class="article-anchor" href="#资源（Resource）" aria-hidden="true"></a></h4><p>资源管理，通过 URL 对应用和 API 进行调度和响应，支持多种形式的 API、文件资源化访问。</p>
+<h4 id="API" class="article-heading"><a href="#API" class="headerlink" title="API"></a>API<a class="article-anchor" href="#API" aria-hidden="true"></a></h4><p>通过 JSON 的方式对外提供统一范式的视图数据接口。</p>
+<h3 id="3-应用模块组件" class="article-heading"><a href="#3-应用模块组件" class="headerlink" title="3. 应用模块组件"></a>3. 应用模块组件<a class="article-anchor" href="#3-应用模块组件" aria-hidden="true"></a></h3><p>应用组件，是抽象度较高且非普通数据管理类应用功能模块定义的组件，可以根据具体的需求灵活选择配置。</p>
+<h4 id="工作流（Workflow）" class="article-heading"><a href="#工作流（Workflow）" class="headerlink" title="工作流（Workflow）"></a>工作流（Workflow）<a class="article-anchor" href="#工作流（Workflow）" aria-hidden="true"></a></h4><p>工作流组件，基于工作流模型和流转步骤规则完成流程业务的流转，包含审批、退回、条件判断等流程操作和规则流转的功能。支持工作流模型、流转步骤和规则的的可视化配置。</p>
+<h4 id="消息（Message）" class="article-heading"><a href="#消息（Message）" class="headerlink" title="消息（Message）"></a>消息（Message）<a class="article-anchor" href="#消息（Message）" aria-hidden="true"></a></h4><p>消息组件，根据业务场景需要，对于需要用户及时关注的事件支持多种形式（系统、短信、邮件）的消息推送，提供消息通知接口供其它组件调用。</p>
+<h4 id="任务（Task）" class="article-heading"><a href="#任务（Task）" class="headerlink" title="任务（Task）"></a>任务（Task）<a class="article-anchor" href="#任务（Task）" aria-hidden="true"></a></h4><p>任务组件，对 EAD 系统定时任务管理和触发。</p>
+<h4 id="视图（View）" class="article-heading"><a href="#视图（View）" class="headerlink" title="视图（View）"></a>视图（View）<a class="article-anchor" href="#视图（View）" aria-hidden="true"></a></h4><p>视图组件，基于模型组件实现视图管理和组织输出视图 API 数据。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-03-11T06:01:09.000Z" itemprop="dateModified">上次更新：2017-03-11</time>
+                <a href="ability.html" class="article-footer-prev" title="能力架构"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="rainbow.html" class="article-footer-next" title="Rainbow"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'hexojs';
+  var disqus_url = 'https://hexo.io/ead/components.html';
+  var disqus_title = "服务组件";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-基础组件"><span class="toc-text">1. 基础组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#模型（Model）"><span class="toc-text">模型（Model）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#存储（Storage）"><span class="toc-text">存储（Storage）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参数（Param）"><span class="toc-text">参数（Param）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#驱动（Driver）"><span class="toc-text">驱动（Driver）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-系统组件"><span class="toc-text">2. 系统组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#用户（User）"><span class="toc-text">用户（User）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#应用（App）"><span class="toc-text">应用（App）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#资源（Resource）"><span class="toc-text">资源（Resource）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#API"><span class="toc-text">API</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-应用模块组件"><span class="toc-text">3. 应用模块组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#工作流（Workflow）"><span class="toc-text">工作流（Workflow）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息（Message）"><span class="toc-text">消息（Message）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#任务（Task）"><span class="toc-text">任务（Task）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视图（View）"><span class="toc-text">视图（View）</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">技术架构</strong><a href="index.html" class="sidebar-link">概述</a><a href="platform.html" class="sidebar-link">平台介绍</a><a href="protocol.html" class="sidebar-link">协议架构</a><a href="model.html" class="sidebar-link">模型架构</a><a href="engine.html" class="sidebar-link">引擎架构</a><a href="ability.html" class="sidebar-link">能力架构</a><a href="components.html" class="sidebar-link current">服务组件</a><a href="rainbow.html" class="sidebar-link">Rainbow</a><a href="resources.html" class="sidebar-link">一切皆资源</a><a href="developer.html" class="sidebar-link">开发者中心</a><a href="scenario.html" class="sidebar-link">典型应用场景</a><a href="deployment.html" class="sidebar-link">部署架构</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://zespia.tw/" target="_blank">GBros.</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/hexojs" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/hexojs/hexo" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/zh-cn/api/" class="mobile-nav-link">API</a><a href="/news/" class="mobile-nav-link">新闻</a><a href="/plugins/" class="mobile-nav-link">插件</a><a href="/themes/" class="mobile-nav-link">主题</a><a href="/ead/" class="mobile-nav-link">EAD</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/hexojs/hexo" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">技术架构</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="platform.html" class="mobile-nav-link">平台介绍</a><a href="protocol.html" class="mobile-nav-link">协议架构</a><a href="model.html" class="mobile-nav-link">模型架构</a><a href="engine.html" class="mobile-nav-link">引擎架构</a><a href="ability.html" class="mobile-nav-link">能力架构</a><a href="components.html" class="mobile-nav-link current">服务组件</a><a href="rainbow.html" class="mobile-nav-link">Rainbow</a><a href="resources.html" class="mobile-nav-link">一切皆资源</a><a href="developer.html" class="mobile-nav-link">开发者中心</a><a href="scenario.html" class="mobile-nav-link">典型应用场景</a><a href="deployment.html" class="mobile-nav-link">部署架构</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'cdea7d4e47d84f6145b77e7f68689f35',
+  indexName: 'hexo_zh-cn',
+  inputSelector: '#search-input'
+});
+</script>
+
+
+</body>
+</html>

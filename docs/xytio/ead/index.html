@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>概述 | 西云图</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://hexo.io/xytio/ead/index.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://hexo.io/xytio/ead/index.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://hexo.io/zh-cn/xytio/ead/index.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="西云图">
+  <!-- Open Graph -->
+  <meta name="description" content="本文包含对 EAD 应用设计开发平台的技术架构设计的综合阐述。包括前后端技术架构说明，平台开发使用关键编程技术和思想介绍。阐明系统完全面向数据模型的设计理念，以数据定义软件，一切皆资源，面向微服务和 API 的设计思想。
+术语定义EAD企业云应用设计器，EAD 应用设计开发平台的核心配置模块，存储和管理配置开发的流程和数据，对引擎运行生命周期中的中间件、参数、视图和动作通用驱动和自定义驱动的调度。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="概述">
+<meta property="og:url" content="https://hexo.io/xytio/ead/index.html">
+<meta property="og:site_name" content="西云图">
+<meta property="og:description" content="本文包含对 EAD 应用设计开发平台的技术架构设计的综合阐述。包括前后端技术架构说明，平台开发使用关键编程技术和思想介绍。阐明系统完全面向数据模型的设计理念，以数据定义软件，一切皆资源，面向微服务和 API 的设计思想。
+术语定义EAD企业云应用设计器，EAD 应用设计开发平台的核心配置模块，存储和管理配置开发的流程和数据，对引擎运行生命周期中的中间件、参数、视图和动作通用驱动和自定义驱动的调度。">
+<meta property="og:updated_time" content="2017-03-11T05:05:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="概述">
+<meta name="twitter:description" content="本文包含对 EAD 应用设计开发平台的技术架构设计的综合阐述。包括前后端技术架构说明，平台开发使用关键编程技术和思想介绍。阐明系统完全面向数据模型的设计理念，以数据定义软件，一切皆资源，面向微服务和 API 的设计思想。
+术语定义EAD企业云应用设计器，EAD 应用设计开发平台的核心配置模块，存储和管理配置开发的流程和数据，对引擎运行生命周期中的中间件、参数、视图和动作通用驱动和自定义驱动的调度。">
+<meta name="twitter:site" content="hexojs">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/web/" class="main-nav-link">Web</a><a href="/node/" class="main-nav-link">Node</a><a href="/j2ee/" class="main-nav-link">J2EE</a><a href="/xytio/" class="main-nav-link">XYT.IO</a><a href="/ux/" class="main-nav-link">UX</a><a href="/mobile/" class="main-nav-link">Mobile</a><a href="/webapp/" class="main-nav-link">Web App</a><a href="/database/" class="main-nav-link">Database</a>
+      <a href="https://github.com/hexojs/hexo" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">概述</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/xytio/ead/index.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>本文包含对 EAD 应用设计开发平台的技术架构设计的综合阐述。包括前后端技术架构说明，平台开发使用关键编程技术和思想介绍。阐明系统完全面向数据模型的设计理念，以数据定义软件，一切皆资源，面向微服务和 API 的设计思想。</p>
+<h2 id="术语定义" class="article-heading"><a href="#术语定义" class="headerlink" title="术语定义"></a>术语定义<a class="article-anchor" href="#术语定义" aria-hidden="true"></a></h2><h3 id="EAD" class="article-heading"><a href="#EAD" class="headerlink" title="EAD"></a>EAD<a class="article-anchor" href="#EAD" aria-hidden="true"></a></h3><p>企业云应用设计器，EAD 应用设计开发平台的核心配置模块，存储和管理配置开发的流程和数据，对引擎运行生命周期中的中间件、参数、视图和动作通用驱动和自定义驱动的调度。</p>
+<h3 id="Base" class="article-heading"><a href="#Base" class="headerlink" title="Base"></a>Base<a class="article-anchor" href="#Base" aria-hidden="true"></a></h3><p>基础抽象，主要代表 EAD 平台中内置的基础抽象类数据模型或 EAD 引擎程序代码中的基础抽象类程序。</p>
+<h3 id="Sys" class="article-heading"><a href="#Sys" class="headerlink" title="Sys"></a>Sys<a class="article-anchor" href="#Sys" aria-hidden="true"></a></h3><p>通用系统功能，主要代表 EAD 平台中全局通用的业务功能模块，主要包括账户、日志、工作流、通知、消息、动态、日志等通用系统模块。</p>
+<h3 id="Restful" class="article-heading"><a href="#Restful" class="headerlink" title="Restful"></a>Restful<a class="article-anchor" href="#Restful" aria-hidden="true"></a></h3><p>具象状态传输，REST 通常基于使用 HTTP，URI，和 JSON、XML 以及 HTML 这些现有的广泛流行的协议和标准。资源是由URI来指定。对资源的操作包括获取、创建、修改和删除资源，操作对应 HTTP 协议提供的 GET、POST、PUT 和 DELETE 方法。通过操作资源的表现形式来操作资源。资源的表现形式则是 JSON、XML 或者 HTML，取决于读者是机器还是人，是消费 Web 服务的客户软件还是 Web 浏览器。在目前 EAD 的架构体系中，资源的主要表现形式为 JSON 对象。</p>
+<h3 id="EAD-引擎（EAD-Engine）" class="article-heading"><a href="#EAD-引擎（EAD-Engine）" class="headerlink" title="EAD 引擎（EAD Engine）"></a>EAD 引擎（EAD Engine）<a class="article-anchor" href="#EAD-引擎（EAD-Engine）" aria-hidden="true"></a></h3><p>EAD 服务端 API 引擎，基于 J2EE 软件开发平台的 Spring Cloud 框架体系构建，以 AOP 架构思想对数据持久化、视图驱动、动作驱动以及应用及资源进行管理和调度，对外统一输出基于 Restful 风格的 API，供 Rainbow 或者其它客户端程序调用和渲染。</p>
+<h3 id="Rainbow" class="article-heading"><a href="#Rainbow" class="headerlink" title="Rainbow"></a>Rainbow<a class="article-anchor" href="#Rainbow" aria-hidden="true"></a></h3><p>EAD 平台前端解析引擎，基于 HTML5、CSS3 和 JavaScript 对 EAD 服务引擎提供的 Rest Service API 进行解析和渲染，动态生成 Web 用户交互界面的前端应用程序框架。 </p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-03-11T05:05:35.000Z" itemprop="dateModified">上次更新：2017-03-11</time>
+                <a href="ead/platform.html" class="article-footer-next" title="平台介绍"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'hexojs';
+  var disqus_url = 'https://hexo.io/xytio/ead/index.html';
+  var disqus_title = "概述";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#术语定义"><span class="toc-text">术语定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EAD"><span class="toc-text">EAD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Base"><span class="toc-text">Base</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sys"><span class="toc-text">Sys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Restful"><span class="toc-text">Restful</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EAD-引擎（EAD-Engine）"><span class="toc-text">EAD 引擎（EAD Engine）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rainbow"><span class="toc-text">Rainbow</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">EAD</strong><a href="index.html" class="sidebar-link current">概述</a><a href="ead/platform.html" class="sidebar-link">平台介绍</a><a href="ead/protocol.html" class="sidebar-link">协议架构</a><a href="ead/model.html" class="sidebar-link">模型架构</a><a href="ead/engine.html" class="sidebar-link">引擎架构</a><a href="ead/ability.html" class="sidebar-link">能力架构</a><a href="ead/components.html" class="sidebar-link">服务组件</a><a href="ead/rainbow.html" class="sidebar-link">Rainbow</a><a href="ead/resources.html" class="sidebar-link">一切皆资源</a><a href="ead/developer.html" class="sidebar-link">开发者中心</a><a href="ead/scenario.html" class="sidebar-link">典型应用场景</a><a href="ead/deployment.html" class="sidebar-link">部署架构</a><strong class="sidebar-title">sidebar.xytio.dashboard</strong></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://zespia.tw/" target="_blank">GBros.</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/hexojs" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/hexojs/hexo" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/web/" class="mobile-nav-link">Web</a><a href="/node/" class="mobile-nav-link">Node</a><a href="/j2ee/" class="mobile-nav-link">J2EE</a><a href="/xytio/" class="mobile-nav-link">XYT.IO</a><a href="/ux/" class="mobile-nav-link">UX</a><a href="/mobile/" class="mobile-nav-link">Mobile</a><a href="/webapp/" class="mobile-nav-link">Web App</a><a href="/database/" class="mobile-nav-link">Database</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/hexojs/hexo" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">EAD</strong><a href="index.html" class="mobile-nav-link current">概述</a><a href="ead/platform.html" class="mobile-nav-link">平台介绍</a><a href="ead/protocol.html" class="mobile-nav-link">协议架构</a><a href="ead/model.html" class="mobile-nav-link">模型架构</a><a href="ead/engine.html" class="mobile-nav-link">引擎架构</a><a href="ead/ability.html" class="mobile-nav-link">能力架构</a><a href="ead/components.html" class="mobile-nav-link">服务组件</a><a href="ead/rainbow.html" class="mobile-nav-link">Rainbow</a><a href="ead/resources.html" class="mobile-nav-link">一切皆资源</a><a href="ead/developer.html" class="mobile-nav-link">开发者中心</a><a href="ead/scenario.html" class="mobile-nav-link">典型应用场景</a><a href="ead/deployment.html" class="mobile-nav-link">部署架构</a><strong class="mobile-nav-title">sidebar.xytio.dashboard</strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'cdea7d4e47d84f6145b77e7f68689f35',
+  indexName: 'hexo_zh-cn',
+  inputSelector: '#search-input'
+});
+</script>
+
+
+</body>
+</html>

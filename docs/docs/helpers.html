@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Helpers | 西云图</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://hexo.io/docs/helpers.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://hexo.io/docs/helpers.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://hexo.io/zh-cn/docs/helpers.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="西云图">
+  <!-- Open Graph -->
+  <meta name="description" content="Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.
+URLurl_forReturns a url with the root path prefixed. You should use this helper instead of c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Helpers">
+<meta property="og:url" content="https://hexo.io/docs/helpers.html">
+<meta property="og:site_name" content="西云图">
+<meta property="og:description" content="Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.
+URLurl_forReturns a url with the root path prefixed. You should use this helper instead of c">
+<meta property="og:updated_time" content="2017-03-06T16:46:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Helpers">
+<meta name="twitter:description" content="Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.
+URLurl_forReturns a url with the root path prefixed. You should use this helper instead of c">
+<meta name="twitter:site" content="hexojs">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/web/" class="main-nav-link">Web</a><a href="/node/" class="main-nav-link">Node</a><a href="/j2ee/" class="main-nav-link">J2EE</a><a href="/xytio/" class="main-nav-link">XYT.IO</a><a href="/ux/" class="main-nav-link">UX</a><a href="/mobile/" class="main-nav-link">Mobile</a><a href="/webapp/" class="main-nav-link">Web App</a><a href="/database/" class="main-nav-link">Database</a>
+      <a href="https://github.com/hexojs/hexo" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/helpers.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Helpers</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/docs/helpers.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.</p>
+<h2 id="URL" class="article-heading"><a href="#URL" class="headerlink" title="URL"></a>URL<a class="article-anchor" href="#URL" aria-hidden="true"></a></h2><h3 id="url-for" class="article-heading"><a href="#url-for" class="headerlink" title="url_for"></a>url_for<a class="article-anchor" href="#url-for" aria-hidden="true"></a></h3><p>Returns a url with the root path prefixed. You should use this helper instead of <code>config.root + path</code> since Hexo 2.7.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- url_for(path) %&gt;</div></pre></td></tr></table></figure>
+<h3 id="relative-url" class="article-heading"><a href="#relative-url" class="headerlink" title="relative_url"></a>relative_url<a class="article-anchor" href="#relative-url" aria-hidden="true"></a></h3><p>Returns the relative URL from <code>from</code> to <code>to</code>.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- relative_url(<span class="keyword">from</span>, to) %&gt;</div></pre></td></tr></table></figure>
+<h3 id="gravatar" class="article-heading"><a href="#gravatar" class="headerlink" title="gravatar"></a>gravatar<a class="article-anchor" href="#gravatar" aria-hidden="true"></a></h3><p>Inserts a Gravatar image.<br>If you don’t specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- gravatar(email, [options]);</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- gravatar(<span class="string">'a@abc.com'</span>) %&gt;</div><div class="line"><span class="comment">// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787</span></div><div class="line"></div><div class="line">&lt;%- gravatar(<span class="string">'a@abc.com'</span>, <span class="number">40</span>) %&gt;</div><div class="line"><span class="comment">// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40</span></div><div class="line"></div><div class="line">&lt;%- gravatar(<span class="string">'a@abc.com'</span> &#123;<span class="attr">s</span>: <span class="number">40</span>, <span class="attr">d</span>: <span class="string">'http://example.com/image.png'</span>&#125;) %&gt;</div><div class="line"><span class="comment">// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&amp;d=http%3A%2F%2Fexample.com%2Fimage.png</span></div></pre></td></tr></table></figure>
+<h2 id="HTML-Tags" class="article-heading"><a href="#HTML-Tags" class="headerlink" title="HTML Tags"></a>HTML Tags<a class="article-anchor" href="#HTML-Tags" aria-hidden="true"></a></h2><h3 id="css" class="article-heading"><a href="#css" class="headerlink" title="css"></a>css<a class="article-anchor" href="#css" aria-hidden="true"></a></h3><p>Loads CSS files. <code>path</code> can be an array or a string. If <code>path</code> isn’t prefixed with <code>/</code> or any protocol, it’ll get prefixed with the root URL. If you didn’t add the <code>.css</code> extension after <code>path</code>, it will be added automatically.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- css(path, ...) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- css(<span class="string">'style.css'</span>) %&gt;</div><div class="line"><span class="comment">// &lt;link rel="stylesheet" href="/style.css" type="text/css"&gt;</span></div><div class="line"></div><div class="line">&lt;%- css([<span class="string">'style.css'</span>, <span class="string">'screen.css'</span>]) %&gt;</div><div class="line"><span class="comment">// &lt;link rel="stylesheet" href="/style.css" type="text/css"&gt;</span></div><div class="line"><span class="comment">// &lt;link rel="stylesheet" href="/screen.css" type="text/css"&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="js" class="article-heading"><a href="#js" class="headerlink" title="js"></a>js<a class="article-anchor" href="#js" aria-hidden="true"></a></h3><p>Loads JavaScript files. <code>path</code> can be an array or a string. If <code>path</code> isn’t prefixed with <code>/</code> or any protocol, it’ll get prefixed with the root URL. If you didn’t add the <code>.js</code> extension after <code>path</code>, it will be added automatically.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- js(path, ...) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- js(<span class="string">'script.js'</span>) %&gt;</div><div class="line"><span class="comment">// &lt;script type="text/javascript" src="/script.js"&gt;&lt;/script&gt;</span></div><div class="line"></div><div class="line">&lt;%- js([<span class="string">'script.js'</span>, <span class="string">'gallery.js'</span>]) %&gt;</div><div class="line"><span class="comment">// &lt;script type="text/javascript" src="/script.js"&gt;&lt;/script&gt;</span></div><div class="line"><span class="comment">// &lt;script type="text/javascript" src="/gallery.js"&gt;&lt;/script&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="link-to" class="article-heading"><a href="#link-to" class="headerlink" title="link_to"></a>link_to<a class="article-anchor" href="#link-to" aria-hidden="true"></a></h3><p>Inserts a link.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- link_to(path, [text], [options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>external</code></td>
+<td>Opens the link in a new tab</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Class name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- link_to(<span class="string">'http://www.google.com'</span>) %&gt;</div><div class="line"><span class="comment">// &lt;a href="http://www.google.com" title="http://www.google.com"&gt;http://www.google.com&lt;/a&gt;</span></div><div class="line"></div><div class="line">&lt;%- link_to(<span class="string">'http://www.google.com'</span>, <span class="string">'Google'</span>) %&gt;</div><div class="line"><span class="comment">// &lt;a href="http://www.google.com" title="Google"&gt;Google&lt;/a&gt;</span></div><div class="line"></div><div class="line">&lt;%- link_to(<span class="string">'http://www.google.com'</span>, <span class="string">'Google'</span>, &#123;<span class="attr">external</span>: <span class="literal">true</span>&#125;) %&gt;</div><div class="line"><span class="comment">// &lt;a href="http://www.google.com" title="Google" target="_blank" rel="external"&gt;Google&lt;/a&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="mail-to" class="article-heading"><a href="#mail-to" class="headerlink" title="mail_to"></a>mail_to<a class="article-anchor" href="#mail-to" aria-hidden="true"></a></h3><p>Inserts a mail link.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- mail_to(path, [text], [options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>class</code></td>
+<td>Class name</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>ID</td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td>Mail subject</td>
+</tr>
+<tr>
+<td><code>cc</code></td>
+<td>CC</td>
+</tr>
+<tr>
+<td><code>bcc</code></td>
+<td>BCC</td>
+</tr>
+<tr>
+<td><code>body</code></td>
+<td>Mail content</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- mail_to(<span class="string">'a@abc.com'</span>) %&gt;</div><div class="line"><span class="comment">// &lt;a href="mailto:a@abc.com" title="a@abc.com"&gt;a@abc.com&lt;/a&gt;</span></div><div class="line"></div><div class="line">&lt;%- mail_to(<span class="string">'a@abc.com'</span>, <span class="string">'Email'</span>) %&gt;</div><div class="line"><span class="comment">// &lt;a href="mailto:a@abc.com" title="Email"&gt;Email&lt;/a&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="image-tag" class="article-heading"><a href="#image-tag" class="headerlink" title="image_tag"></a>image_tag<a class="article-anchor" href="#image-tag" aria-hidden="true"></a></h3><p>Inserts an image.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- image_tag(path, [options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alt</code></td>
+<td>Alternative text of the image</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Class name</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>ID</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>Image width</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>Image height</td>
+</tr>
+</tbody>
+</table>
+<h3 id="favicon-tag" class="article-heading"><a href="#favicon-tag" class="headerlink" title="favicon_tag"></a>favicon_tag<a class="article-anchor" href="#favicon-tag" aria-hidden="true"></a></h3><p>Inserts a favicon.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- favicon_tag(path) %&gt;</div></pre></td></tr></table></figure>
+<h3 id="feed-tag" class="article-heading"><a href="#feed-tag" class="headerlink" title="feed_tag"></a>feed_tag<a class="article-anchor" href="#feed-tag" aria-hidden="true"></a></h3><p>Inserts a feed link.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- feed_tag(path, [options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Feed title</td>
+<td></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Feed type</td>
+<td>atom</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Conditional-Tags" class="article-heading"><a href="#Conditional-Tags" class="headerlink" title="Conditional Tags"></a>Conditional Tags<a class="article-anchor" href="#Conditional-Tags" aria-hidden="true"></a></h2><h3 id="is-current" class="article-heading"><a href="#is-current" class="headerlink" title="is_current"></a>is_current<a class="article-anchor" href="#is-current" aria-hidden="true"></a></h3><p>Check whether <code>path</code> matches the URL of the current page. Use <code>strict</code> options to enable strict matching.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- is_current(path, [strict]) %&gt;</div></pre></td></tr></table></figure>
+<h3 id="is-home" class="article-heading"><a href="#is-home" class="headerlink" title="is_home"></a>is_home<a class="article-anchor" href="#is-home" aria-hidden="true"></a></h3><p>Check whether the current page is home page.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- is_home() %&gt;</div></pre></td></tr></table></figure>
+<h3 id="is-post" class="article-heading"><a href="#is-post" class="headerlink" title="is_post"></a>is_post<a class="article-anchor" href="#is-post" aria-hidden="true"></a></h3><p>Check whether the current page is a post.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- is_post() %&gt;</div></pre></td></tr></table></figure>
+<h3 id="is-archive" class="article-heading"><a href="#is-archive" class="headerlink" title="is_archive"></a>is_archive<a class="article-anchor" href="#is-archive" aria-hidden="true"></a></h3><p>Check whether the current page is an archive page.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- is_archive() %&gt;</div></pre></td></tr></table></figure>
+<h3 id="is-year" class="article-heading"><a href="#is-year" class="headerlink" title="is_year"></a>is_year<a class="article-anchor" href="#is-year" aria-hidden="true"></a></h3><p>Check whether the current page is a yearly archive page.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- is_year() %&gt;</div></pre></td></tr></table></figure>
+<h3 id="is-month" class="article-heading"><a href="#is-month" class="headerlink" title="is_month"></a>is_month<a class="article-anchor" href="#is-month" aria-hidden="true"></a></h3><p>Check whether the current page is a monthly archive page.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- is_month() %&gt;</div></pre></td></tr></table></figure>
+<h3 id="is-category" class="article-heading"><a href="#is-category" class="headerlink" title="is_category"></a>is_category<a class="article-anchor" href="#is-category" aria-hidden="true"></a></h3><p>Check whether the current page is a category page.<br>If a string is given as parameter, check whether the current page match the given category.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- is_category() %&gt;</div><div class="line">&lt;%- is_category('hobby') %&gt;</div></pre></td></tr></table></figure>
+<h3 id="is-tag" class="article-heading"><a href="#is-tag" class="headerlink" title="is_tag"></a>is_tag<a class="article-anchor" href="#is-tag" aria-hidden="true"></a></h3><p>Check whether the current page is a tag page.<br>If a string is given as parameter, check whether the current page match the given tag.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- is_tag() %&gt;</div><div class="line">&lt;%- is_tag('hobby') %&gt;</div></pre></td></tr></table></figure>
+<h2 id="String-Manipulation" class="article-heading"><a href="#String-Manipulation" class="headerlink" title="String Manipulation"></a>String Manipulation<a class="article-anchor" href="#String-Manipulation" aria-hidden="true"></a></h2><h3 id="trim" class="article-heading"><a href="#trim" class="headerlink" title="trim"></a>trim<a class="article-anchor" href="#trim" aria-hidden="true"></a></h3><p>Removes prefixing and trailing spaces of a string.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- trim(string) %&gt;</div></pre></td></tr></table></figure>
+<h3 id="strip-html" class="article-heading"><a href="#strip-html" class="headerlink" title="strip_html"></a>strip_html<a class="article-anchor" href="#strip-html" aria-hidden="true"></a></h3><p>Sanitizes all HTML tags in a string.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- strip_html(string) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight"><table><tr><td class="code"><pre><div class="line">&lt;%- strip_html('It's not &lt;b&gt;important&lt;/b&gt; anymore!') %&gt;</div><div class="line">// It's not important anymore!</div></pre></td></tr></table></figure>
+<h3 id="titlecase" class="article-heading"><a href="#titlecase" class="headerlink" title="titlecase"></a>titlecase<a class="article-anchor" href="#titlecase" aria-hidden="true"></a></h3><p>Transforms a string into proper title caps.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- titlecase(string) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight"><table><tr><td class="code"><pre><div class="line">&lt;%- titlecase('this is an apple') %&gt;</div><div class="line"># This is an Apple</div></pre></td></tr></table></figure>
+<h3 id="markdown" class="article-heading"><a href="#markdown" class="headerlink" title="markdown"></a>markdown<a class="article-anchor" href="#markdown" aria-hidden="true"></a></h3><p>Renders a string with Markdown.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- markdown(str) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- markdown(<span class="string">'make me **strong**'</span>) %&gt;</div><div class="line"><span class="comment">// make me &lt;strong&gt;strong&lt;/strong&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="render" class="article-heading"><a href="#render" class="headerlink" title="render"></a>render<a class="article-anchor" href="#render" aria-hidden="true"></a></h3><p>Renders a string.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- render(str, engine, [options]) %&gt;</div></pre></td></tr></table></figure>
+<h3 id="word-wrap" class="article-heading"><a href="#word-wrap" class="headerlink" title="word_wrap"></a>word_wrap<a class="article-anchor" href="#word-wrap" aria-hidden="true"></a></h3><p>Wraps text into lines no longer than <code>length</code>. <code>length</code> is 80 by default.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- word_wrap(str, [length]) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- word_wrap(<span class="string">'Once upon a time'</span>, <span class="number">8</span>) %&gt;</div><div class="line"><span class="comment">// Once upon\n a time</span></div></pre></td></tr></table></figure>
+<h3 id="truncate" class="article-heading"><a href="#truncate" class="headerlink" title="truncate"></a>truncate<a class="article-anchor" href="#truncate" aria-hidden="true"></a></h3><p>Truncates text after certain <code>length</code>. Default is 30 characters.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- truncate(text, [options]) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- truncate(<span class="string">'Once upon a time in a world far far away'</span>, &#123;<span class="attr">length</span>: <span class="number">17</span>&#125;) %&gt;</div><div class="line"><span class="comment">// Once upon a ti...</span></div><div class="line"></div><div class="line">&lt;%- truncate(<span class="string">'Once upon a time in a world far far away'</span>, &#123;<span class="attr">length</span>: <span class="number">17</span>, <span class="attr">separator</span>: <span class="string">' '</span>&#125;) %&gt;</div><div class="line"><span class="comment">// Once upon a...</span></div><div class="line"></div><div class="line">&lt;%- truncate(<span class="string">'And they found that many people were sleeping better.'</span>, &#123;<span class="attr">length</span>: <span class="number">25</span>, <span class="attr">omission</span>: <span class="string">'... (continued)'</span>&#125;) %&gt;</div><div class="line"><span class="comment">// And they f... (continued)</span></div></pre></td></tr></table></figure>
+<h2 id="Templates" class="article-heading"><a href="#Templates" class="headerlink" title="Templates"></a>Templates<a class="article-anchor" href="#Templates" aria-hidden="true"></a></h2><h3 id="partial" class="article-heading"><a href="#partial" class="headerlink" title="partial"></a>partial<a class="article-anchor" href="#partial" aria-hidden="true"></a></h3><p>Loads other template files. You can define local variables in <code>locals</code>.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- partial(layout, [locals], [options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cache</code></td>
+<td>Cache contents (Use fragment cache)</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>only</code></td>
+<td>Strict local variables. Only use variables set in <code>locals</code> in templates.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fragment-cache" class="article-heading"><a href="#fragment-cache" class="headerlink" title="fragment_cache"></a>fragment_cache<a class="article-anchor" href="#fragment-cache" aria-hidden="true"></a></h3><p>Caches the contents in a fragment. It saves the contents within a fragment and serves the cache when the next request comes in.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- fragment_cache(id, fn);</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- fragment_cache(<span class="string">'header'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">'&lt;header&gt;&lt;/header&gt;'</span>;</div><div class="line">&#125;) %&gt;</div></pre></td></tr></table></figure>
+<h2 id="Date-amp-Time" class="article-heading"><a href="#Date-amp-Time" class="headerlink" title="Date &amp; Time"></a>Date &amp; Time<a class="article-anchor" href="#Date-amp-Time" aria-hidden="true"></a></h2><h3 id="date" class="article-heading"><a href="#date" class="headerlink" title="date"></a>date<a class="article-anchor" href="#date" aria-hidden="true"></a></h3><p>Inserts formatted date. <code>date</code> can be unix time, ISO string, date object, or <a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a> object. <code>format</code> is <code>date_format</code> setting by default.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- date(date, [format]) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- date(<span class="built_in">Date</span>.now()) %&gt;</div><div class="line"><span class="comment">// 2013-01-01</span></div><div class="line"></div><div class="line">&lt;%- date(<span class="built_in">Date</span>.now(), <span class="string">'YYYY/M/D'</span>) %&gt;</div><div class="line"><span class="comment">// Jan 1 2013</span></div></pre></td></tr></table></figure>
+<h3 id="date-xml" class="article-heading"><a href="#date-xml" class="headerlink" title="date_xml"></a>date_xml<a class="article-anchor" href="#date-xml" aria-hidden="true"></a></h3><p>Inserts date in XML format. <code>date</code> can be unix time, ISO string, date object, or <a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a> object.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- date_xml(date) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- date_xml(<span class="built_in">Date</span>.now()) %&gt;</div><div class="line"><span class="comment">// 2013-01-01T00:00:00.000Z</span></div></pre></td></tr></table></figure>
+<h3 id="time" class="article-heading"><a href="#time" class="headerlink" title="time"></a>time<a class="article-anchor" href="#time" aria-hidden="true"></a></h3><p>Inserts formatted time. <code>date</code> can be unix time, ISO string, date object, or <a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a> object. <code>format</code> is <code>time_format</code> setting by default.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- time(date, [format]) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- time(<span class="built_in">Date</span>.now()) %&gt;</div><div class="line"><span class="comment">// 13:05:12</span></div><div class="line"></div><div class="line">&lt;%- time(<span class="built_in">Date</span>.now(), <span class="string">'h:mm:ss a'</span>) %&gt;</div><div class="line"><span class="comment">// 1:05:12 pm</span></div></pre></td></tr></table></figure>
+<h3 id="full-date" class="article-heading"><a href="#full-date" class="headerlink" title="full_date"></a>full_date<a class="article-anchor" href="#full-date" aria-hidden="true"></a></h3><p>Inserts formatted date and time. <code>date</code> can be unix time, ISO string, date object, or <a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a> object. <code>format</code> is <code>date_format + time_format</code> setting by default.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- full_date(date, [format]) %&gt;</div></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- full_date(<span class="keyword">new</span> <span class="built_in">Date</span>()) %&gt;</div><div class="line"><span class="comment">// Jan 1, 2013 0:00:00</span></div><div class="line"></div><div class="line">&lt;%- full_date(<span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="string">'dddd, MMMM Do YYYY, h:mm:ss a'</span>) %&gt;</div><div class="line"><span class="comment">// Tuesday, January 1st 2013, 12:00:00 am</span></div></pre></td></tr></table></figure>
+<h3 id="moment" class="article-heading"><a href="#moment" class="headerlink" title="moment"></a>moment<a class="article-anchor" href="#moment" aria-hidden="true"></a></h3><p><a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a> library.</p>
+<h2 id="List" class="article-heading"><a href="#List" class="headerlink" title="List"></a>List<a class="article-anchor" href="#List" aria-hidden="true"></a></h2><h3 id="list-categories" class="article-heading"><a href="#list-categories" class="headerlink" title="list_categories"></a>list_categories<a class="article-anchor" href="#list-categories" aria-hidden="true"></a></h3><p>Inserts a list of all categories.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- list_categories([options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orderby</code></td>
+<td>Order of categories</td>
+<td>name</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>Sort of order. <code>1</code>, <code>asc</code> for ascending; <code>-1</code>, <code>desc</code> for descending</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>show_count</code></td>
+<td>Display the number of posts for each category</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Style to display the category list. <code>list</code> displays categories in an unordered list.</td>
+<td>list</td>
+</tr>
+<tr>
+<td><code>separator</code></td>
+<td>Separator between categories. (Only works if <code>style</code> is not <code>list</code>)</td>
+<td>,</td>
+</tr>
+<tr>
+<td><code>depth</code></td>
+<td>Levels of categories to be displayed. <code>0</code> displays all categories and child categories; <code>-1</code> is similar to <code>0</code> but displayed in flat; <code>1</code> displays only top level categories.</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Class name of category list.</td>
+<td>category</td>
+</tr>
+<tr>
+<td><code>transform</code></td>
+<td>The function that changes the display of category name.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suffix</code></td>
+<td>Add a suffix to link.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-tags" class="article-heading"><a href="#list-tags" class="headerlink" title="list_tags"></a>list_tags<a class="article-anchor" href="#list-tags" aria-hidden="true"></a></h3><p>Inserts a list of all tags.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- list_tags([options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orderby</code></td>
+<td>Order of categories</td>
+<td>name</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>Sort of order. <code>1</code>, <code>asc</code> for ascending; <code>-1</code>, <code>desc</code> for descending</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>show_count</code></td>
+<td>Display the number of posts for each tag</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Style to display the tag list. <code>list</code> displays tags in an unordered list.</td>
+<td>list</td>
+</tr>
+<tr>
+<td><code>separator</code></td>
+<td>Separator between categories. (Only works if <code>style</code> is not <code>list</code>)</td>
+<td>,</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Class name of tag list.</td>
+<td>tag</td>
+</tr>
+<tr>
+<td><code>transform</code></td>
+<td>The function that changes the display of category name.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>The number of tags to display (0 = unlimited)</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>suffix</code></td>
+<td>Add a suffix to link.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-archives" class="article-heading"><a href="#list-archives" class="headerlink" title="list_archives"></a>list_archives<a class="article-anchor" href="#list-archives" aria-hidden="true"></a></h3><p>Inserts a list of archives.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- list_archives([options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>Type. This value can be <code>yearly</code> or <code>monthly</code>.</td>
+<td>monthly</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>Sort of order. <code>1</code>, <code>asc</code> for ascending; <code>-1</code>, <code>desc</code> for descending</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>show_count</code></td>
+<td>Display the number of posts for each archive</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>format</code></td>
+<td>Date format</td>
+<td>MMMM YYYY</td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Style to display the archive list. <code>list</code> displays archives in an unordered list.</td>
+<td>list</td>
+</tr>
+<tr>
+<td><code>separator</code></td>
+<td>Separator between archives. (Only works if <code>style</code> is not <code>list</code>)</td>
+<td>,</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Class name of archive list.</td>
+<td>archive</td>
+</tr>
+<tr>
+<td><code>transform</code></td>
+<td>The function that changes the display of archive name.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-posts" class="article-heading"><a href="#list-posts" class="headerlink" title="list_posts"></a>list_posts<a class="article-anchor" href="#list-posts" aria-hidden="true"></a></h3><p>Inserts a list of posts.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- list_posts([options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orderby</code></td>
+<td>Order of posts</td>
+<td>date</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>Sort of order. <code>1</code>, <code>asc</code> for ascending; <code>-1</code>, <code>desc</code> for descending</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Style to display the post list. <code>list</code> displays posts in an unordered list.</td>
+<td>list</td>
+</tr>
+<tr>
+<td><code>separator</code></td>
+<td>Separator between posts. (Only works if <code>style</code> is not <code>list</code>)</td>
+<td>,</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Class name of post list.</td>
+<td>post</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>The number of posts to display (0 = unlimited)</td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>transform</code></td>
+<td>The function that changes the display of post name.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tagcloud" class="article-heading"><a href="#tagcloud" class="headerlink" title="tagcloud"></a>tagcloud<a class="article-anchor" href="#tagcloud" aria-hidden="true"></a></h3><p>Inserts a tag cloud.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- tagcloud([tags], [options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>min_font</code></td>
+<td>Minimal font size</td>
+<td>10</td>
+</tr>
+<tr>
+<td><code>max_font</code></td>
+<td>Maximum font size</td>
+<td>20</td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td>Unit of font size</td>
+<td>px</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>Total amount of tags</td>
+<td>40</td>
+</tr>
+<tr>
+<td><code>orderby</code></td>
+<td>Order of tags</td>
+<td>name</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>Sort order. <code>1</code>, <code>sac</code> as ascending; <code>-1</code>, <code>desc</code> as descending</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Colorizes the tag cloud</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>start_color</code></td>
+<td>Start color. You can use hex (<code>#b700ff</code>), rgba (<code>rgba(183, 0, 255, 1)</code>), hsla (<code>hsla(283, 100%, 50%, 1)</code>) or <a href="http://www.w3.org/TR/css3-color/#svg-color" target="_blank" rel="external">color keywords</a>. This option only works when <code>color</code> is true.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>end_color</code></td>
+<td>End color. You can use hex (<code>#b700ff</code>), rgba (<code>rgba(183, 0, 255, 1)</code>), hsla (<code>hsla(283, 100%, 50%, 1)</code>) or <a href="http://www.w3.org/TR/css3-color/#svg-color" target="_blank" rel="external">color keywords</a>. This option only works when <code>color</code> is true.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Miscellaneous" class="article-heading"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous<a class="article-anchor" href="#Miscellaneous" aria-hidden="true"></a></h2><h3 id="paginator" class="article-heading"><a href="#paginator" class="headerlink" title="paginator"></a>paginator<a class="article-anchor" href="#paginator" aria-hidden="true"></a></h3><p>Inserts a paginator.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- paginator(options) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>base</code></td>
+<td>Base URL</td>
+<td>/</td>
+</tr>
+<tr>
+<td><code>format</code></td>
+<td>URL format</td>
+<td>page/%d/</td>
+</tr>
+<tr>
+<td><code>total</code></td>
+<td>The number of pages</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>current</code></td>
+<td>Current page number</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>prev_text</code></td>
+<td>The link text of previous page. Works only if <code>prev_next</code> is set to true.</td>
+<td>Prev</td>
+</tr>
+<tr>
+<td><code>next_text</code></td>
+<td>The link text of next page. Works only if <code>prev_next</code> is set to true.</td>
+<td>Next</td>
+</tr>
+<tr>
+<td><code>space</code></td>
+<td>The space text</td>
+<td>&hellp;</td>
+</tr>
+<tr>
+<td><code>prev_next</code></td>
+<td>Display previous and next links</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>end_size</code></td>
+<td>The number of pages displayed on the start and the end side</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>mid_size</code></td>
+<td>The number of pages displayed between current page, but not including current page</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>show_all</code></td>
+<td>Display all pages. If this is set true, <code>end_size</code> and <code>mid_size</code> will not works.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="search-form" class="article-heading"><a href="#search-form" class="headerlink" title="search_form"></a>search_form<a class="article-anchor" href="#search-form" aria-hidden="true"></a></h3><p>Inserts a Google search form.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- search_form(options) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>class</code></td>
+<td>The class name of form</td>
+<td>search-form</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>Search hint word</td>
+<td>Search</td>
+</tr>
+<tr>
+<td><code>button</code></td>
+<td>Display search button. The value can be a boolean or a string. When the value is a string, it’ll be the text of the button.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="number-format" class="article-heading"><a href="#number-format" class="headerlink" title="number_format"></a>number_format<a class="article-anchor" href="#number-format" aria-hidden="true"></a></h3><p>Formats a number.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- number_format(number, [options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>precision</code></td>
+<td>The precision of number. The value can be <code>false</code> or a nonnegative integer.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>delimiter</code></td>
+<td>The thousands delimiter</td>
+<td>,</td>
+</tr>
+<tr>
+<td><code>separator</code></td>
+<td>The separator between the fractional and integer digits.</td>
+<td>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;<span class="attr">precision</span>: <span class="number">1</span>&#125;) %&gt;</div><div class="line"><span class="comment">// 12,345.68</span></div><div class="line"></div><div class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;<span class="attr">precision</span>: <span class="number">4</span>&#125;) %&gt;</div><div class="line"><span class="comment">// 12,345.6700</span></div><div class="line"></div><div class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;<span class="attr">precision</span>: <span class="number">0</span>&#125;) %&gt;</div><div class="line"><span class="comment">// 12,345</span></div><div class="line"></div><div class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;<span class="attr">delimiter</span>: <span class="string">''</span>&#125;) %&gt;</div><div class="line"><span class="comment">// 12345.67</span></div><div class="line"></div><div class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;<span class="attr">separator</span>: <span class="string">'/'</span>&#125;) %&gt;</div><div class="line"><span class="comment">// 12,345/67</span></div></pre></td></tr></table></figure>
+<h3 id="open-graph" class="article-heading"><a href="#open-graph" class="headerlink" title="open_graph"></a>open_graph<a class="article-anchor" href="#open-graph" aria-hidden="true"></a></h3><p>Inserts <a href="http://ogp.me/" target="_blank" rel="external">Open Graph</a> data.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- open_graph([options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Page title (<code>og:title</code>)</td>
+<td><code>page.title</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Page type (<code>og:type</code>)</td>
+<td>blog</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Page URL (<code>og:url</code>)</td>
+<td><code>url</code></td>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td>Page cover (<code>og:image</code>)</td>
+<td>First image in the content</td>
+</tr>
+<tr>
+<td><code>site_name</code></td>
+<td>Site name (<code>og:site_name</code>)</td>
+<td><code>config.title</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Page description (<code>og:desription</code>)</td>
+<td>Page excerpt or first 200 characters of the content</td>
+</tr>
+<tr>
+<td><code>twitter_card</code></td>
+<td>Twitter card type (<code>twitter:card</code>)</td>
+<td>summary</td>
+</tr>
+<tr>
+<td><code>twitter_id</code></td>
+<td>Twitter ID (<code>twitter:creator</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>twitter_site</code></td>
+<td>Twitter Site (<code>twitter:site</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>google_plus</code></td>
+<td>Google+ profile link</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fb_admins</code></td>
+<td>Facebook admin ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fb_app_id</code></td>
+<td>Facebook App ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="toc" class="article-heading"><a href="#toc" class="headerlink" title="toc"></a>toc<a class="article-anchor" href="#toc" aria-hidden="true"></a></h3><p>Parses all heading tags (h1~h6) in the content and inserts a table of contents.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- toc(str, [options]) %&gt;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>class</code></td>
+<td>Class name</td>
+<td>toc</td>
+</tr>
+<tr>
+<td><code>list_number</code></td>
+<td>Displays list number</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&lt;%- toc(page.content) %&gt;</div></pre></td></tr></table></figure>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-03-06T16:46:12.000Z" itemprop="dateModified">上次更新：2017-03-06</time>
+                <a href="variables.html" class="article-footer-prev" title="变量"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="internationalization.html" class="article-footer-next" title="国际化 (i18n)"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'hexojs';
+  var disqus_url = 'https://hexo.io/docs/helpers.html';
+  var disqus_title = "Helpers";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#URL"><span class="toc-text">URL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#url-for"><span class="toc-text">url_for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#relative-url"><span class="toc-text">relative_url</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gravatar"><span class="toc-text">gravatar</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-Tags"><span class="toc-text">HTML Tags</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css"><span class="toc-text">css</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js"><span class="toc-text">js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#link-to"><span class="toc-text">link_to</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mail-to"><span class="toc-text">mail_to</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#image-tag"><span class="toc-text">image_tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#favicon-tag"><span class="toc-text">favicon_tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#feed-tag"><span class="toc-text">feed_tag</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conditional-Tags"><span class="toc-text">Conditional Tags</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#is-current"><span class="toc-text">is_current</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#is-home"><span class="toc-text">is_home</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#is-post"><span class="toc-text">is_post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#is-archive"><span class="toc-text">is_archive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#is-year"><span class="toc-text">is_year</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#is-month"><span class="toc-text">is_month</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#is-category"><span class="toc-text">is_category</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#is-tag"><span class="toc-text">is_tag</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-Manipulation"><span class="toc-text">String Manipulation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#trim"><span class="toc-text">trim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#strip-html"><span class="toc-text">strip_html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#titlecase"><span class="toc-text">titlecase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown"><span class="toc-text">markdown</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#render"><span class="toc-text">render</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#word-wrap"><span class="toc-text">word_wrap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#truncate"><span class="toc-text">truncate</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Templates"><span class="toc-text">Templates</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#partial"><span class="toc-text">partial</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fragment-cache"><span class="toc-text">fragment_cache</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date-amp-Time"><span class="toc-text">Date & Time</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#date"><span class="toc-text">date</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#date-xml"><span class="toc-text">date_xml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#time"><span class="toc-text">time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#full-date"><span class="toc-text">full_date</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#moment"><span class="toc-text">moment</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#List"><span class="toc-text">List</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#list-categories"><span class="toc-text">list_categories</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list-tags"><span class="toc-text">list_tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list-archives"><span class="toc-text">list_archives</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list-posts"><span class="toc-text">list_posts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tagcloud"><span class="toc-text">tagcloud</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Miscellaneous"><span class="toc-text">Miscellaneous</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#paginator"><span class="toc-text">paginator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#search-form"><span class="toc-text">search_form</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#number-format"><span class="toc-text">number_format</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#open-graph"><span class="toc-text">open_graph</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toc"><span class="toc-text">toc</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="setup.html" class="sidebar-link">建站</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a><strong class="sidebar-title">基本操作</strong><a href="writing.html" class="sidebar-link">写作</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">标签插件</a><a href="asset-folders.html" class="sidebar-link">资源文件夹</a><a href="data-files.html" class="sidebar-link">数据文件夹</a><a href="server.html" class="sidebar-link">服务器</a><a href="generating.html" class="sidebar-link">生成器</a><a href="deployment.html" class="sidebar-link">部署</a><strong class="sidebar-title">自定义</strong><a href="permalinks.html" class="sidebar-link">永久链接</a><a href="themes.html" class="sidebar-link">主题</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">变量</a><a href="helpers.html" class="sidebar-link current">辅助函数</a><a href="internationalization.html" class="sidebar-link">国际化 (i18n)</a><a href="plugins.html" class="sidebar-link">插件</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://zespia.tw/" target="_blank">GBros.</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/hexojs" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/hexojs/hexo" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/web/" class="mobile-nav-link">Web</a><a href="/node/" class="mobile-nav-link">Node</a><a href="/j2ee/" class="mobile-nav-link">J2EE</a><a href="/xytio/" class="mobile-nav-link">XYT.IO</a><a href="/ux/" class="mobile-nav-link">UX</a><a href="/mobile/" class="mobile-nav-link">Mobile</a><a href="/webapp/" class="mobile-nav-link">Web App</a><a href="/database/" class="mobile-nav-link">Database</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/hexojs/hexo" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="setup.html" class="mobile-nav-link">建站</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="commands.html" class="mobile-nav-link">命令</a><a href="migration.html" class="mobile-nav-link">迁移</a><strong class="mobile-nav-title">基本操作</strong><a href="writing.html" class="mobile-nav-link">写作</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">标签插件</a><a href="asset-folders.html" class="mobile-nav-link">资源文件夹</a><a href="data-files.html" class="mobile-nav-link">数据文件夹</a><a href="server.html" class="mobile-nav-link">服务器</a><a href="generating.html" class="mobile-nav-link">生成器</a><a href="deployment.html" class="mobile-nav-link">部署</a><strong class="mobile-nav-title">自定义</strong><a href="permalinks.html" class="mobile-nav-link">永久链接</a><a href="themes.html" class="mobile-nav-link">主题</a><a href="templates.html" class="mobile-nav-link">模版</a><a href="variables.html" class="mobile-nav-link">变量</a><a href="helpers.html" class="mobile-nav-link current">辅助函数</a><a href="internationalization.html" class="mobile-nav-link">国际化 (i18n)</a><a href="plugins.html" class="mobile-nav-link">插件</a><strong class="mobile-nav-title">其他</strong><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/helpers.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'cdea7d4e47d84f6145b77e7f68689f35',
+  indexName: 'hexo_zh-cn',
+  inputSelector: '#search-input'
+});
+</script>
+
+
+</body>
+</html>
