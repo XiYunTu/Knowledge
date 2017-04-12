@@ -124,10 +124,11 @@ webapp:
   react:
     overview: /webapp/react/index.html
   ionic: 
-    introduction: /webapp/ionic/index.html
-    installation: /webapp/ionic/installation.html
-    getting_started: /webapp/ionic/getting-started.html
-    advanced: /webapp/ionic/advanced.html
+    introduction: ionic-index.html
+    installation: ionic-installation.html
+    getting_started: ionic-getting-started.html
+    advanced: ionic-advanced.html
+    components: ionic-components.html
 
 database:
   base:

@@ -118,6 +118,7 @@ sidebar:
     ionic: Ionic
     introduction: 介绍
     installation: 开发环境安装
-    getting_started: 入门
-    advanced: 高级进阶
+    getting_started: 模板应用入门介绍
+    advanced: 模板应用进阶
+    components: UI 组件
 
