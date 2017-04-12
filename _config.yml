@@ -21,9 +21,9 @@ deploy:
   type: git
   repo: git@github.com:XiYunTu/docs.hulu.io.git
 
-disqus_shortname: hexojs
+#disqus_shortname: hexojs
 #google_analytics: UA-4910098-10
-fb_admins: 100000247608790
+#fb_admins: 100000247608790
 algolia:
   en:
     api_key: c3d5d4c995b5e0c2ffb5623900279a66
@@ -34,5 +34,5 @@ algolia:
   zh-cn:
     api_key: cdea7d4e47d84f6145b77e7f68689f35
     index_name: hexo_zh-cn
-twitter: hexojs
-github: hexojs/hexo
+#twitter: hexojs
+#github: hexojs/hexo

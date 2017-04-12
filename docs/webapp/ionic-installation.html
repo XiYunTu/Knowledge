@@ -75,8 +75,6 @@ Windows 请使用管理员身份运行命令行窗口。
 
 
 Cordovanpm install -g co">
-<meta name="twitter:site" content="hexojs">
-<meta property="fb:admins" content="100000247608790">
   <!-- Google Analytics -->
   
 </head>
@@ -90,7 +88,7 @@ Cordovanpm install -g co">
     </h1>
     <nav id="main-nav">
       <a href="/web/" class="main-nav-link">Web</a><a href="/node/" class="main-nav-link">Node</a><a href="/j2ee/" class="main-nav-link">J2EE</a><a href="/xytio/" class="main-nav-link">XYT.IO</a><a href="/ux/" class="main-nav-link">UX</a><a href="/mobile/" class="main-nav-link">Mobile</a><a href="/webapp/" class="main-nav-link">Web App</a><a href="/database/" class="main-nav-link">Database</a>
-      <a href="https://github.com/hexojs/hexo" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a href="https://github.com/" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -164,23 +162,18 @@ Cordovanpm install -g co">
                 <a href="ionic-index.html" class="article-footer-prev" title="介绍"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="ionic-getting-started.html" class="article-footer-next" title="模板应用入门介绍"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 <script>
-  var disqus_shortname = 'hexojs';
-  var disqus_url = 'https://hexo.io/webapp/ionic-installation.html';
-  var disqus_title = "开发环境安装";
-  var disqus_config = function(){
-    this.language = 'zh';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "1379b1a973cf4720b3d9e9c8804f1230",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 </script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
@@ -193,7 +186,7 @@ Cordovanpm install -g co">
         </div>
       </article>
       <aside id="sidebar" role="navigation">
-  <div class="inner"><strong class="sidebar-title">基础知识</strong><a href="/webapp/base/spa.html" class="sidebar-link">单页应用框架</a><a href="/webapp/base/modules.html" class="sidebar-link">模块管理</a><strong class="sidebar-title">Angular</strong><a href="/webapp/angular/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">Vue</strong><a href="/webapp/vue/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">React</strong><a href="/webapp/react/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">Ionic</strong><a href="ionic-index.html" class="sidebar-link">介绍</a><a href="ionic-installation.html" class="sidebar-link current">开发环境安装</a><a href="ionic-getting-started.html" class="sidebar-link">模板应用入门介绍</a><a href="ionic-advanced.html" class="sidebar-link">模板应用进阶</a><a href="ionic-components.html" class="sidebar-link">UI 组件</a></div>
+  <div class="inner"><strong class="sidebar-title">基础知识</strong><a href="/webapp/base/spa.html" class="sidebar-link">单页应用框架</a><a href="/webapp/base/modules.html" class="sidebar-link">模块管理</a><strong class="sidebar-title">Angular</strong><a href="/webapp/angular/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">Vue</strong><a href="/webapp/vue/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">React</strong><a href="/webapp/react/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">Ionic</strong><a href="ionic-index.html" class="sidebar-link">介绍</a><a href="ionic-installation.html" class="sidebar-link current">开发环境安装</a><a href="ionic-getting-started.html" class="sidebar-link">模板应用入门介绍</a><a href="ionic-advanced.html" class="sidebar-link">模板应用进阶</a><a href="ionic-components.html" class="sidebar-link">UI 组件</a><a href="ionic-platform.html" class="sidebar-link">平台定义与原生插件</a></div>
 </aside>
     </div>
   </div>
@@ -206,8 +199,8 @@ Cordovanpm install -g co">
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
     </div>
     <div id="footer-links">
-      <a href="https://twitter.com/hexojs" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/hexojs/hexo" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
     </div>
   </div>
 </footer>
@@ -219,11 +212,11 @@ Cordovanpm install -g co">
     <ul id="mobile-nav-list">
       <a href="/web/" class="mobile-nav-link">Web</a><a href="/node/" class="mobile-nav-link">Node</a><a href="/j2ee/" class="mobile-nav-link">J2EE</a><a href="/xytio/" class="mobile-nav-link">XYT.IO</a><a href="/ux/" class="mobile-nav-link">UX</a><a href="/mobile/" class="mobile-nav-link">Mobile</a><a href="/webapp/" class="mobile-nav-link">Web App</a><a href="/database/" class="mobile-nav-link">Database</a>
       <li class="mobile-nav-item">
-        <a href="https://github.com/hexojs/hexo" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+        <a href="https://github.com/" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
       </li>
     </ul>
     
-      <strong class="mobile-nav-title">基础知识</strong><a href="/webapp/base/spa.html" class="mobile-nav-link">单页应用框架</a><a href="/webapp/base/modules.html" class="mobile-nav-link">模块管理</a><strong class="mobile-nav-title">Angular</strong><a href="/webapp/angular/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">Vue</strong><a href="/webapp/vue/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">React</strong><a href="/webapp/react/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">Ionic</strong><a href="ionic-index.html" class="mobile-nav-link">介绍</a><a href="ionic-installation.html" class="mobile-nav-link current">开发环境安装</a><a href="ionic-getting-started.html" class="mobile-nav-link">模板应用入门介绍</a><a href="ionic-advanced.html" class="mobile-nav-link">模板应用进阶</a><a href="ionic-components.html" class="mobile-nav-link">UI 组件</a>
+      <strong class="mobile-nav-title">基础知识</strong><a href="/webapp/base/spa.html" class="mobile-nav-link">单页应用框架</a><a href="/webapp/base/modules.html" class="mobile-nav-link">模块管理</a><strong class="mobile-nav-title">Angular</strong><a href="/webapp/angular/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">Vue</strong><a href="/webapp/vue/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">React</strong><a href="/webapp/react/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">Ionic</strong><a href="ionic-index.html" class="mobile-nav-link">介绍</a><a href="ionic-installation.html" class="mobile-nav-link current">开发环境安装</a><a href="ionic-getting-started.html" class="mobile-nav-link">模板应用入门介绍</a><a href="ionic-advanced.html" class="mobile-nav-link">模板应用进阶</a><a href="ionic-components.html" class="mobile-nav-link">UI 组件</a><a href="ionic-platform.html" class="mobile-nav-link">平台定义与原生插件</a>
     
   </div>
   <div id="mobile-lang-select-wrap">

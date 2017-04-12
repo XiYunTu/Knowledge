@@ -59,8 +59,6 @@ EAD 引擎EAD 引擎端允许根据需求和场景利用 Java">
 如上图所示，从服务端到客户端的数据传输环节一共有 6 个节点允许自行开发扩展驱动，在 EAD 引擎和 Rainbow 中分别以依赖注入和闭包回调的方式动态加载和执行扩展驱动。
 EAD 引擎EAD 引擎端允许根据需求和场景利用 Java">
 <meta name="twitter:image" content="https://hexo.io/.\images\extend-driver.png">
-<meta name="twitter:site" content="hexojs">
-<meta property="fb:admins" content="100000247608790">
   <!-- Google Analytics -->
   
 </head>
@@ -74,7 +72,7 @@ EAD 引擎EAD 引擎端允许根据需求和场景利用 Java">
     </h1>
     <nav id="main-nav">
       <a href="/web/" class="main-nav-link">Web</a><a href="/node/" class="main-nav-link">Node</a><a href="/j2ee/" class="main-nav-link">J2EE</a><a href="/xytio/" class="main-nav-link">XYT.IO</a><a href="/ux/" class="main-nav-link">UX</a><a href="/mobile/" class="main-nav-link">Mobile</a><a href="/webapp/" class="main-nav-link">Web App</a><a href="/database/" class="main-nav-link">Database</a>
-      <a href="https://github.com/hexojs/hexo" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a href="https://github.com/" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -124,23 +122,18 @@ EAD 引擎EAD 引擎端允许根据需求和场景利用 Java">
                 <a href="index.html" class="article-footer-next" title="概述"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 <script>
-  var disqus_shortname = 'hexojs';
-  var disqus_url = 'https://hexo.io/xytio/ead/extension.html';
-  var disqus_title = "扩展驱动";
-  var disqus_config = function(){
-    this.language = 'zh';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "1379b1a973cf4720b3d9e9c8804f1230",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 </script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
@@ -166,8 +159,8 @@ EAD 引擎EAD 引擎端允许根据需求和场景利用 Java">
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
     </div>
     <div id="footer-links">
-      <a href="https://twitter.com/hexojs" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/hexojs/hexo" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
     </div>
   </div>
 </footer>
@@ -179,7 +172,7 @@ EAD 引擎EAD 引擎端允许根据需求和场景利用 Java">
     <ul id="mobile-nav-list">
       <a href="/web/" class="mobile-nav-link">Web</a><a href="/node/" class="mobile-nav-link">Node</a><a href="/j2ee/" class="mobile-nav-link">J2EE</a><a href="/xytio/" class="mobile-nav-link">XYT.IO</a><a href="/ux/" class="mobile-nav-link">UX</a><a href="/mobile/" class="mobile-nav-link">Mobile</a><a href="/webapp/" class="mobile-nav-link">Web App</a><a href="/database/" class="mobile-nav-link">Database</a>
       <li class="mobile-nav-item">
-        <a href="https://github.com/hexojs/hexo" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+        <a href="https://github.com/" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
       </li>
     </ul>
     

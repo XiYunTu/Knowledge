@@ -129,6 +129,7 @@ webapp:
     getting_started: ionic-getting-started.html
     advanced: ionic-advanced.html
     components: ionic-components.html
+    platform: ionic-platform.html
 
 database:
   base:

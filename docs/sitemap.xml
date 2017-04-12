@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.io/webapp/ionic-index.html</loc>
+    
+    <lastmod>2017-04-12T09:36:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/webapp/ionic-platform.html</loc>
+    
+    <lastmod>2017-04-12T08:59:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hexo.io/webapp/ionic-components.html</loc>
     
     <lastmod>2017-04-12T02:45:30.000Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>https://hexo.io/webapp/ionic-installation.html</loc>
     
     <lastmod>2017-04-11T09:32:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/webapp/ionic-index.html</loc>
-    
-    <lastmod>2017-04-11T08:09:33.000Z</lastmod>
     
   </url>
   
@@ -187,13 +194,6 @@
     <loc>https://hexo.io/xytio/ead/index.html</loc>
     
     <lastmod>2017-03-11T05:05:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/docs/writing.html</loc>
-    
-    <lastmod>2017-03-06T16:46:12.000Z</lastmod>
     
   </url>
   
@@ -401,14 +401,14 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/news/2014/07/13/hexo-2-8-released/</loc>
+    <loc>https://hexo.io/zh-cn/api/locals.html</loc>
     
     <lastmod>2017-03-06T16:46:12.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/api/migrator.html</loc>
+    <loc>https://hexo.io/news/2014/07/13/hexo-2-8-released/</loc>
     
     <lastmod>2017-03-06T16:46:12.000Z</lastmod>
     
@@ -800,7 +800,14 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/api/locals.html</loc>
+    <loc>https://hexo.io/docs/writing.html</loc>
+    
+    <lastmod>2017-03-06T16:46:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/api/migrator.html</loc>
     
     <lastmod>2017-03-06T16:46:12.000Z</lastmod>
     
