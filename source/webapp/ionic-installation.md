@@ -22,6 +22,8 @@ npm install -g cordova
 
 ## Ionic CLI
 
+以下介绍 Ionic CLI 常用命令，更多命令及详细参数参见[官方文档](http://ionicframework.com/docs/v1/cli/)。
+
 ### 安装
 
 ```
@@ -43,12 +45,15 @@ ionic start myApp tabs
 >   - sidemenu
 >   - blank
 
+切换到应用根目录下执行后续操作。
+```
+cd myapp
+```
 
 ### 启动 Web 服务
 
-切换到应用目录下，执行如下命令启动 Web 服务：
+执行如下命令启动 Web 服务：
 ```
-cd myapp
 ionic serve
 ```
 
@@ -66,4 +71,24 @@ ionic platform add ios
 
 ### 模拟器运行
 
+Android
+```
+ionic emulate android
+```
+
+iOS
+```
+ionic emulate ios
+```
+
 ### 应用打包
+
+Android
+```
+ionic build android
+```
+
+iOS
+```
+ionic build ios
+```

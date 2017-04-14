@@ -4,11 +4,14 @@ title: 概述
 
 知道如何建立网站？那么你已经知道如何构建移动应用程序。Ionic框架提供了最好的网站和本机应用程序组件，用于构建高度互动的本机和渐进的Web应用程序。
 
+如无特殊说明，后续文档中的内容和描述都以 V1.X 版本为准。Ionic V1 基于 Angular JS 1.X，为了更好的进行开发请参考相关技术文档。
+
 ## 相关网站
 
 - 主页：http://ionicframework.com/
 - 文档：http://ionicframework.com/docs/
 - Github：https://github.com/driftyco/ionic
+- AngularJS：https://angularjs.org/
 
 ## Ionic 特点
 
@@ -44,3 +47,9 @@ Ionic V2 专注于通过 Cordova 构建本机/混合应用程序，并增加 Pro
 - iOS 8+;
 - Windows 10 Universal App;
 - Android 4.4+;
+
+## 参考示例代码
+
+- SmartService：https://github.com/XiYunTu/smart-service
+- 移动作业许可：https://github.com/XiYunTu/OPMS/tree/master/operating
+- Food Waste：https://github.com/XiYunTu/food-waste-ionic
