@@ -63,7 +63,7 @@ Windows 请使用管理员身份运行命令行窗口。
 
 
 Cordovanpm install -g co">
-<meta property="og:updated_time" content="2017-04-11T09:32:41.000Z">
+<meta property="og:updated_time" content="2017-04-13T05:49:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开发环境安装">
 <meta name="twitter:description" content="安装依赖Node.js &amp;amp; NPMIonic 以及 Cordova 安装依赖于 Node.js 和 NPM 包管理器，如果你没有安装请前往 Node.js官方网站下载合适的版本（建议安装最新版本）进行安装。
@@ -138,7 +138,8 @@ Cordovanpm install -g co">
 <blockquote>
 <p>Cordova 官方网址：<a href="https://cordova.apache.org/" target="_blank" rel="external">https://cordova.apache.org/</a></p>
 </blockquote>
-<h2 id="Ionic-CLI" class="article-heading"><a href="#Ionic-CLI" class="headerlink" title="Ionic CLI"></a>Ionic CLI<a class="article-anchor" href="#Ionic-CLI" aria-hidden="true"></a></h2><h3 id="安装" class="article-heading"><a href="#安装" class="headerlink" title="安装"></a>安装<a class="article-anchor" href="#安装" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">npm install -g ionic</div></pre></td></tr></table></figure>
+<h2 id="Ionic-CLI" class="article-heading"><a href="#Ionic-CLI" class="headerlink" title="Ionic CLI"></a>Ionic CLI<a class="article-anchor" href="#Ionic-CLI" aria-hidden="true"></a></h2><p>以下介绍 Ionic CLI 常用命令，更多命令及详细参数参见<a href="http://ionicframework.com/docs/v1/cli/" target="_blank" rel="external">官方文档</a>。</p>
+<h3 id="安装" class="article-heading"><a href="#安装" class="headerlink" title="安装"></a>安装<a class="article-anchor" href="#安装" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">npm install -g ionic</div></pre></td></tr></table></figure>
 <h3 id="创建应用" class="article-heading"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用<a class="article-anchor" href="#创建应用" aria-hidden="true"></a></h3><p>切换文件目录到你要创建应用的父目录下，执行如下命令创建 Ionic 应用：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ionic start myApp tabs</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>$ ionic start myapp [template]</p>
@@ -152,13 +153,18 @@ Cordovanpm install -g co">
 </li>
 </ul>
 </blockquote>
-<h3 id="启动-Web-服务" class="article-heading"><a href="#启动-Web-服务" class="headerlink" title="启动 Web 服务"></a>启动 Web 服务<a class="article-anchor" href="#启动-Web-服务" aria-hidden="true"></a></h3><p>切换到应用目录下，执行如下命令启动 Web 服务：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd myapp</div><div class="line">ionic serve</div></pre></td></tr></table></figure></p>
+<p>切换到应用根目录下执行后续操作。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd myapp</div></pre></td></tr></table></figure></p>
+<h3 id="启动-Web-服务" class="article-heading"><a href="#启动-Web-服务" class="headerlink" title="启动 Web 服务"></a>启动 Web 服务<a class="article-anchor" href="#启动-Web-服务" aria-hidden="true"></a></h3><p>执行如下命令启动 Web 服务：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ionic serve</div></pre></td></tr></table></figure></p>
 <h3 id="添加目标平台" class="article-heading"><a href="#添加目标平台" class="headerlink" title="添加目标平台"></a>添加目标平台<a class="article-anchor" href="#添加目标平台" aria-hidden="true"></a></h3><p>Android<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ionic platform add android</div></pre></td></tr></table></figure></p>
 <p>iOS<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ionic platform add ios</div></pre></td></tr></table></figure></p>
-<h3 id="模拟器运行" class="article-heading"><a href="#模拟器运行" class="headerlink" title="模拟器运行"></a>模拟器运行<a class="article-anchor" href="#模拟器运行" aria-hidden="true"></a></h3><h3 id="应用打包" class="article-heading"><a href="#应用打包" class="headerlink" title="应用打包"></a>应用打包<a class="article-anchor" href="#应用打包" aria-hidden="true"></a></h3>
+<h3 id="模拟器运行" class="article-heading"><a href="#模拟器运行" class="headerlink" title="模拟器运行"></a>模拟器运行<a class="article-anchor" href="#模拟器运行" aria-hidden="true"></a></h3><p>Android<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ionic emulate android</div></pre></td></tr></table></figure></p>
+<p>iOS<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ionic emulate ios</div></pre></td></tr></table></figure></p>
+<h3 id="应用打包" class="article-heading"><a href="#应用打包" class="headerlink" title="应用打包"></a>应用打包<a class="article-anchor" href="#应用打包" aria-hidden="true"></a></h3><p>Android<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ionic build android</div></pre></td></tr></table></figure></p>
+<p>iOS<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ionic build ios</div></pre></td></tr></table></figure></p>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2017-04-11T09:32:41.000Z" itemprop="dateModified">上次更新：2017-04-11</time>
+                <time class="article-footer-updated" datetime="2017-04-13T05:49:32.000Z" itemprop="dateModified">上次更新：2017-04-13</time>
                 <a href="ionic-index.html" class="article-footer-prev" title="介绍"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="ionic-getting-started.html" class="article-footer-next" title="模板应用入门介绍"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
